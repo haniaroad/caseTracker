@@ -32,3 +32,5 @@ yarn-debug.log*
 config/database.yml
 node_modules/
 
+config/secret_token.rb
+config/initializers/devise.rb
