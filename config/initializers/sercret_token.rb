@@ -1,1 +1,0 @@
-CaseTracker::Application.config.secret_key_base = '698a40f7d17c12a70cb8f892098e3d4a3ec66d7a28c9a0bafa779eff5e58cc4b5a5e199b6e3f7acac4908c32cfacd975ec496c543ba15e485425d14ebf25cf12'
