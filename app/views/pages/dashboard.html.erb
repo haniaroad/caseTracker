@@ -8,7 +8,7 @@
   </head>
   <body>
   <!--Creating navbar outside of div to cover width of screen -->
-
+<div>
     <nav class="navbar navbar-expand-lg navbar-light bg-primary justify-content-end">
 
     <i class="fa fa-bell fa-lg"></i>
@@ -16,12 +16,59 @@
     <a class="navbar-brand" href="#">Clients</a>
     <a class="navbar-brand" href="#">Alerts</a>
 
-  </nav>
-
-  <!--Starting main content-->
-<div class="container text-center">
-  <h1>Cases</h1>
 </div>
+
+<!--Starting Todo Form -->
+<div class="container">
+<center>
+    <h1>Cases</h1>
+
+<%= form_with(model: @todo, local: true) do |form| %>
+  <% if @todo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@todo.errors.count, "error") %> prohibited this todo from being saved:</h2>
+
+      <ul>
+        <% @todo.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+    </center>
+  </div>
+  <% end %>
+<div id="todoForm">
+
+<center>
+<h3> Todos</h3>
+</<center>
+
+
+  <div class="field" id>
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :duedate %>
+   <%= form.date_select :duedate %> 
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_field :description %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+
+</div>
+<% end %>
+
+
+
+  </nav>
   
   </body>
 </html>

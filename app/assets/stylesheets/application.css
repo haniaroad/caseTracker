@@ -14,12 +14,16 @@
  *= require_self
  */
 
- .jumbo {
+ /* .jumbo {
       font-size: 1em; 
-      padding: 1em; 
+      padding-bottom: 1em; 
 } 
       
       
 .right { 
     float: right; 
+} */
+
+#todoForm{
+    float: right;
 }

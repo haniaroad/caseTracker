@@ -3,6 +3,7 @@ class PagesController < ApplicationController
     end
 
     def dashboard
+      @todo = Todo.new
     end
 
   end

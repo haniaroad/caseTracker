@@ -17,3 +17,8 @@ require("channels")
 // const imagePath = (name) => images(name, true)
 //= require popper
 //= require bootstrap-sprockets
+$(document).ready(function(){
+$('.datepicker').datepicker({
+  format: 'mm/dd/yyyy'
+});
+});
